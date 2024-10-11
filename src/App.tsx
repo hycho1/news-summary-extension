@@ -1,15 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Display from './display/display';
-import Sidebar from './sidebar/sidebar';
+import DisplayRoot from './components/display/DisplayRoot';
+import FunctionRoot from './components/function/FunctionRoot';
 
 function App() {
   return (
     <div className="App" style={{display: 'flex'}}>
-      <Display />
-      <Sidebar />
+      <DisplayRoot />
+      <FunctionRoot />
     </div>
   );
 }

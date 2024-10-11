@@ -1,8 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import {Provider, useSelector, useDispatch} from 'react-redux';
-import {createStore} from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
+import { createStore } from 'redux';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
+
+const counterSlice = createSlice({
+  name:'counter',
+  initialState:{value:0},
+  reducers:{
+    up:(state, action) =>{
+      state.value = state.value + action.step;
+    },
+    down:(state, action) =>{
+      state.value = state.value - action.step;
+    },
+  }
+})
 
 function reducer(state, action){  
   if(action.type === 'up'){
