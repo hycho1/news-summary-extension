@@ -1,9 +1,12 @@
-export default function FunctionRoot() {
+import '../../css/function/FunctionRoot.css';
+import FunctionButton from './FunctionButton';
+
+const FunctionRoot = () => {
 
     return (
-        <div>
-            <button>1</button>
-            <button>2</button>
+        <div id="FunctionRoot">
+            <FunctionButton />
         </div>
     );
 }
+export default FunctionRoot;

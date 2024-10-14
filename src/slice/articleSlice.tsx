@@ -3,10 +3,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const asyncArticleFetch:any = createAsyncThunk(
     'articleSlice/asyncArticleFetch',
     async () => {
-
       var client_id = '1F1hHOT4obL85Nl8WY35';
       var client_secret = 'lpCrfwcbsp';
-      const resp = await fetch('/v1/search/news.json?query=' + encodeURI('노벨문학상'),{
+      //const resp = await fetch('https://openapi.naver.com/v1/search/news.json?query=' + encodeURI('노벨문학상'),{
+      const resp = await fetch('v1/search/news.json?query=' + encodeURI('노벨문학상'),{  
         headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}
       });
       const data = await resp.json();

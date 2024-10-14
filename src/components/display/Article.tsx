@@ -1,4 +1,4 @@
-import '../../css/Article.css';
+import '../../css/display/Article.css';
 
 const Article = (article:any) => {
     
@@ -12,10 +12,8 @@ const Article = (article:any) => {
             originallink
         } = article.article;
 
-
-
     return (
-        <div>
+        <div id="Article">
             <p>제목: {title}</p>
             <p>요약: {description}</p>
             <p>발간일: {pubDate}</p>

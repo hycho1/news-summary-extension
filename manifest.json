@@ -1,0 +1,19 @@
+{
+   "short_name": "React App",
+   "name": "Create React App Sample",
+   "start_url": ".",
+   "display": "standalone",
+   "theme_color": "#000000",
+   "background_color": "#ffffff",
+   "action":{
+    "default_popup": "index.html",
+    "default_icon": "logo192.png"
+   },
+   "manifest_version":3,
+   "version":"1.0",
+   "permissions":["proxy"],
+  "host_permissions": [
+    "https://openapi.naver.com/*"
+  ]
+  }
+  

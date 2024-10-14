@@ -1,9 +1,10 @@
 import ArticleContainer from './ArticleContainer';
+import '../../css/display/DisplayRoot.css';
 
 export default function DisplayRoot() {  
  
     return (
-        <div>
+        <div id="DisplayRoot">
             <ArticleContainer />
         </div>
     );

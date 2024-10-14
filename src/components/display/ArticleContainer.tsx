@@ -2,6 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import Article from './Article';
 import { useEffect } from 'react';
 import { asyncArticleFetch } from '../../slice/articleSlice';
+import '../../css/display/ArticleContainer.css';
+
+
 
 const ArticleContainer = () => {
 
@@ -15,12 +18,12 @@ const ArticleContainer = () => {
     console.log('ArticleContainer() -- article', articles);
     
     return (
-        <div>
+        <div id="ArticleContainer">
             {
                 articles.map((article:any, index:number) => {
                     console.log(article)
                   return (
-                    <div key={index}>
+                    <div key={index} >
                         <Article article={article}/>
                     </div>
                   )
