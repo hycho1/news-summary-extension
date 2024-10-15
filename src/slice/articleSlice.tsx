@@ -18,6 +18,7 @@ export const asyncArticleFetch:any = createAsyncThunk(
 const articleSlice = createSlice({
     name: 'articleSlice',
     initialState: {
+        modalStatus: false,
         asyncStatus: 'Standby',
         articleInfo: [
           {
@@ -31,6 +32,10 @@ const articleSlice = createSlice({
     },
     reducers:
     {
+      modalStateChange: (state, action) => {
+        console.log('state.modalStatus',state.modalStatus, action.payload);
+        state.modalStatus = !state.modalStatus;
+      }
     },
     extraReducers: (builder) => {
         builder.addCase(asyncArticleFetch.pending, (state,action)=>{
@@ -46,10 +51,8 @@ const articleSlice = createSlice({
           builder.addCase(asyncArticleFetch.rejected, (state,action)=>{
             state.asyncStatus = 'fail';
           })
-
     }
-
-    
 });
 
 export default articleSlice;
+export const { modalStateChange } = articleSlice.actions;

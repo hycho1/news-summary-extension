@@ -1,0 +1,29 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid brown;
+  }
+   
+  .modal {
+    background: hsl(165, 88%, 67%);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    border: 5px solid purple;
+  }
+   
+  .modal-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 5px;
+    border: 5px solid #4636d4;
+  }
+  
