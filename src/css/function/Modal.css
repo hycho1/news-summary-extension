@@ -18,6 +18,19 @@
     border: 5px solid purple;
   }
    
+  .modal-content {
+    background: hsl(165, 88%, 67%);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    border: 5px solid purple;
+    display: none;
+  }
+    
+  .show{
+    display: block;
+  }
+
   .modal-close {
     position: absolute;
     width: 20px;

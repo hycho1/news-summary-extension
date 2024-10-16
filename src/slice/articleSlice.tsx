@@ -10,7 +10,7 @@ export const asyncArticleFetch:any = createAsyncThunk(
         headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}
       });
       const data = await resp.json();
-      console.log('articleSlice/asyncArticleFetch', data);
+      //console.log('articleSlice/asyncArticleFetch', data);
       return data.items;
     }
   )
@@ -32,9 +32,11 @@ const articleSlice = createSlice({
     },
     reducers:
     {
-      modalStateChange: (state, action) => {
-        console.log('state.modalStatus',state.modalStatus, action.payload);
-        state.modalStatus = !state.modalStatus;
+      modalOpen: (state, action) => {
+        state.modalStatus = true;
+      },
+      modalClose: (state, action) => {
+        state.modalStatus = false;
       }
     },
     extraReducers: (builder) => {
@@ -43,7 +45,7 @@ const articleSlice = createSlice({
           })
           builder.addCase(asyncArticleFetch.fulfilled, (state,action)=>{
             //action.payload를 article형식에 맞게 변환해서 넣어야 함
-            console.log('action.payload',action.payload)
+            //console.log('action.payload',action.payload)
             //state.articleInfo = [ ...state.articleInfo, action.payload];
             state.articleInfo = action.payload;
             state.asyncStatus = 'complete';
@@ -55,4 +57,4 @@ const articleSlice = createSlice({
 });
 
 export default articleSlice;
-export const { modalStateChange } = articleSlice.actions;
+export const { modalOpen, modalClose } = articleSlice.actions;

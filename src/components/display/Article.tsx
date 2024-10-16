@@ -2,7 +2,7 @@ import '../../css/display/Article.css';
 
 const Article = (article:any) => {
     
-    console.log('Article() -- article', article);
+    //console.log('Article() -- article', article);
 
     const {
             title,

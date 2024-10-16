@@ -15,13 +15,13 @@ const ArticleContainer = () => {
     },[])
 
     const articles = useSelector((state:any) => state.article.articleInfo);
-    console.log('ArticleContainer() -- article', articles);
+    //console.log('ArticleContainer() -- article', articles);
     
     return (
         <div id="ArticleContainer">
             {
                 articles.map((article:any, index:number) => {
-                    console.log(article)
+                 //   console.log(article)
                   return (
                     <div key={index} >
                         <Article article={article}/>
